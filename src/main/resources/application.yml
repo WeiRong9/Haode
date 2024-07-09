@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/Haode?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  type-aliases-package: com.xes.haode.entity.po
+  global-config:
+    db-config:
+      id-type: auto
+
+#  # 应用名称（nacos会将改名称作为服务名称）
+#  application:
+#    name: haode-service
+#  cloud:
+#    nacos:
+#      # nacos 服务注册
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+#        namespace: byzq-local # 命名空间
+#      # nacos 配置中心
+#      config:
+#        server-addr: 127.0.0.1:8848
+#        namespace: byzq-local # 命名空间
+#        group: DEFAULT_GROUP # 使用的 nacos 配置分组，默认为 DEFAULT_GROUP
+#        file-extension: yaml # 使用的 nacos 配置集的 dataId 的文件拓展名，默认为 properties
+#        # 共享配置，没有则不加
+#        shared-configs:
+#          - test.yaml
